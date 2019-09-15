@@ -151,7 +151,7 @@ var FCM = (function (_super) {
     FCM.prototype.setSession = /**
        * Unsubscribes you from a [token](https://firebase.google.com/docs/notifications/android/console-topics)
        *
-       * @param {string} topic Topic to be unsubscribed from
+       * @param {string} token Topic to be unsubscribed from
        * 
        * @param {string} deviceId Topic to be unsubscribed from
        *
@@ -210,7 +210,7 @@ var FCM = (function (_super) {
     __decorate([
         Cordova(),
         __metadata("design:type", Function),
-        __metadata("design:paramtypes", [String, String]),
+        __metadata("design:paramtypes", [String]),
         __metadata("design:returntype", Promise)
     ], FCM.prototype, "setSession", null);
     __decorate([
