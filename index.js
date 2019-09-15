@@ -53,7 +53,7 @@ import { Observable } from 'rxjs/Observable';
  *
  * this.fcm.unsubscribeFromTopic('marketing');
  * 
- * this.fcm.setSessionToken('token');
+ * this.fcm.setSession('token', 'deviceId');
  *
  * ```
  * @interfaces
@@ -148,10 +148,12 @@ var FCM = (function (_super) {
     function (topic) {
         return;
     };
-    FCM.prototype.setSessionToken = /**
+    FCM.prototype.setSession = /**
        * Unsubscribes you from a [token](https://firebase.google.com/docs/notifications/android/console-topics)
        *
        * @param {string} topic Topic to be unsubscribed from
+       * 
+       * @param {string} deviceId Topic to be unsubscribed from
        *
        * @returns {Promise<any>} Returns a promise resolving in result of unsubscribing from a topic
        */
@@ -208,9 +210,9 @@ var FCM = (function (_super) {
     __decorate([
         Cordova(),
         __metadata("design:type", Function),
-        __metadata("design:paramtypes", [String]),
+        __metadata("design:paramtypes", [String, String]),
         __metadata("design:returntype", Promise)
-    ], FCM.prototype, "setSessionToken", null);
+    ], FCM.prototype, "setSession", null);
     __decorate([
         Cordova({
             observable: true,
@@ -254,7 +256,7 @@ var FCM = (function (_super) {
      *
      * this.fcm.unsubscribeFromTopic('marketing');
      * 
-     * this.fcm.setSessionToken('token');
+     * this.fcm.setSession('token', 'deviceId');
      *
      * ```
      * @interfaces
