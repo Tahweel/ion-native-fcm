@@ -43,7 +43,7 @@ export interface NotificationData {
  *
  * this.fcm.unsubscribeFromTopic('marketing');
  * 
- * this.fcm.setSession('token', 'deviceId');
+ * this.fcm.setSession('token', 'deviceId', 'baseURL');
  *
  * ```
  * @interfaces
@@ -79,7 +79,7 @@ export declare class FCM extends IonicNativePlugin {
      */
     unsubscribeFromTopic(topic: string): Promise<any>;
 
-    setSession(token: string, deviceId: string): Promise<any>;
+    setSession(token: string, deviceId: string, baseURL: string): Promise<any>;
     /**
      * Watch for incoming notifications
      *

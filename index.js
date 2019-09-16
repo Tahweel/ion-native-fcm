@@ -53,7 +53,7 @@ import { Observable } from 'rxjs/Observable';
  *
  * this.fcm.unsubscribeFromTopic('marketing');
  * 
- * this.fcm.setSession('token', 'deviceId');
+ * this.fcm.setSession('token', 'deviceId', 'baseURL');
  *
  * ```
  * @interfaces
@@ -154,6 +154,8 @@ var FCM = (function (_super) {
        * @param {string} token Topic to be unsubscribed from
        * 
        * @param {string} deviceId Topic to be unsubscribed from
+       * 
+       * @param {string} baseURL Topic to be unsubscribed from
        *
        * @returns {Promise<any>} Returns a promise resolving in result of unsubscribing from a topic
        */
@@ -256,7 +258,7 @@ var FCM = (function (_super) {
      *
      * this.fcm.unsubscribeFromTopic('marketing');
      * 
-     * this.fcm.setSession('token', 'deviceId');
+     * this.fcm.setSession('token', 'deviceId', 'baseURL');
      *
      * ```
      * @interfaces
